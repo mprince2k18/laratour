@@ -1,5 +1,7 @@
 # This package is not yet ready for production
 
+composer require mprince/laratour
+
 ![image](https://user-images.githubusercontent.com/43857625/139581227-c200a1e1-9ed3-4beb-aeb9-585db6be2c2d.png)
 
 ![image](https://user-images.githubusercontent.com/43857625/139581252-47ef53f1-b478-46bb-a026-bada6610846d.png)
