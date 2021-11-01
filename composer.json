@@ -27,6 +27,9 @@
         "psr-4": {
             "Mprince\\Laratour\\": "src"
         },
+        "exclude-from-classmap": [
+            "/vendor/erusev/parsedown-extra/test"
+        ],
         "files": [
             "src/helpers.php"
         ]

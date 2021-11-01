@@ -5,7 +5,7 @@ return [
 
     'layout' => 'layouts.app',
 
-    // 'script_path' => asset('laratour/js/script.js'),
+    'script_path' => asset('laratour/js/script.js'),
     
-    // 'css_path' => asset('laratour/css/style.css')
+    'css_path' => asset('laratour/css/style.css')
 ];

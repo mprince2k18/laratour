@@ -14,6 +14,11 @@ class LaratourController extends Controller
         return view('laratour::index');
     }
 
+    public function create()
+    {
+        return view('laratour::create');
+    }
+
     public function store(Request $request)
     {
         $tour = new Laratour;
@@ -23,6 +28,24 @@ class LaratourController extends Controller
         $tour->placement = $request->placement;
         $tour->path = $request->path;
         $tour->save();
+        return back();
+    }
+
+    public function update(Request $request, $id)
+    {
+        $tour = Laratour::where('id', $id)->first();
+        $tour->element = $request->element;
+        $tour->title = $request->title;
+        $tour->content = $request->content;
+        $tour->placement = $request->placement;
+        $tour->path = $request->path;
+        $tour->save();
+        return back();
+    }
+
+    public function destroy($id)
+    {
+        Laratour::where('id', $id)->delete();
         return back();
     }
     //END
