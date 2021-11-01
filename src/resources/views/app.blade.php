@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{{ config('laratour.css_path') }}">
 
 </head>
-<body class="dark-mode-none overflow-hidden">
+<body class="{{ config('laratour.dark_mode') == 'true' ? 'dark-mode' : '' }} overflow-hidden">
 
 <div class="container">
   @yield('content')

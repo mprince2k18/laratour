@@ -16,6 +16,7 @@ class LaratourController extends Controller
 
     public function create()
     {
+        overWriteEnvFile('LARATOUR_DARK_MODE', 'true');
         return view('laratour::create');
     }
 

@@ -7,5 +7,7 @@ return [
 
     'script_path' => asset('laratour/js/script.js'),
     
-    'css_path' => asset('laratour/css/style.css')
+    'css_path' => asset('laratour/css/style.css'),
+
+    'dark_mode' => env('LARATOUR_DARK_MODE', 'false'),
 ];

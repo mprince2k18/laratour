@@ -39,8 +39,8 @@
                                 <!-- First row -->
                                 <div class="form-row row-eq-spacing-sm">
                                     <div class="col-sm">
-                                    <label for="first-name" class="required">Element ID</label>
-                                    <input type="text" class="form-control" id="first-name" name="element" placeholder="#element1" required="required">
+                                    <label for="first-name" class="required">Element ID or CLASS</label>
+                                    <input type="text" class="form-control" id="first-name" name="element" placeholder="#element1 or .element1" required="required">
                                     </div>
                                     <div class="col-sm">
                                     <label for="last-name" class="required">Title</label>

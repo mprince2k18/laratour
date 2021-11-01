@@ -46,7 +46,7 @@
                                 <div class="form-row row-eq-spacing-sm">
                                     <div class="col-sm">
                                     <label for="first-name{{ $tour->id }}" class="required">Element ID</label>
-                                    <input type="text" class="form-control" id="first-name{{ $tour->id }}" name="element" value="{{ $tour->element ?? 'N/A' }}" placeholder="#element1" required="required">
+                                    <input type="text" class="form-control" id="first-name{{ $tour->id }}" name="element" value="{{ $tour->element ?? 'N/A' }}" placeholder="#element1 or .element1" required="required">
                                     </div>
                                     <div class="col-sm">
                                     <label for="last-name{{ $tour->id }}" class="required">Title</label>
