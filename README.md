@@ -1,52 +1,15 @@
-# Very short description of the package
+# This package is not yet ready for production
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mprince/laratour.svg?style=flat-square)](https://packagist.org/packages/mprince/laratour)
-[![Total Downloads](https://img.shields.io/packagist/dt/mprince/laratour.svg?style=flat-square)](https://packagist.org/packages/mprince/laratour)
-![GitHub Actions](https://github.com/mprince/laratour/actions/workflows/main.yml/badge.svg)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
-
-## Installation
-
-You can install the package via composer:
-
-```bash
+```
 composer require mprince/laratour
 ```
 
-## Usage
+![image](https://user-images.githubusercontent.com/43857625/139581227-c200a1e1-9ed3-4beb-aeb9-585db6be2c2d.png)
 
-```php
-// Usage description here
-```
+![image](https://user-images.githubusercontent.com/43857625/139581252-47ef53f1-b478-46bb-a026-bada6610846d.png)
 
-### Testing
+![image](https://user-images.githubusercontent.com/43857625/139581262-65bf40b9-2b2b-49b7-851f-f89472c6f70f.png)
 
-```bash
-composer test
-```
+![image](https://user-images.githubusercontent.com/43857625/139581275-beff6fc5-2985-4eed-9c2e-4d8dbd28b076.png)
 
-### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email mprince2k16@gmail.com instead of using the issue tracker.
-
-## Credits
-
--   [Mohammad Prince](https://github.com/mprince)
--   [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
