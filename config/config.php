@@ -14,6 +14,6 @@ return [
 
     'dark_mode' => 'false',
 
-    'start_tour_on_load' => false,
+    'start_tour_on_load' => true,
     
 ];

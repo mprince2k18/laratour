@@ -29,7 +29,7 @@
 
                     <div class="col-lg-10 mb-20">
                         <div class="content">
-                            <h1 class="content-title">
+                            <h1 class="content-title content-title-{{ $loop->index }}">
                                 {{ $tour->element ?? 'N/A' }} <a href="{{ route('tour.destroy', [$tour->id, $tour->element]) }}"><i class="fa fa-trash text-danger"></i></a>
                             </h1>
                             <div class="fake-content"></div>
@@ -40,7 +40,7 @@
                             
                                 
                             
-                       <form action="{{ route('tour.update', [$tour->id, $tour->element]) }}" method="POST">
+                       <form action="{{ route('tour.update', $tour->id) }}" method="POST">
                                 @csrf
                                 <!-- First row -->
                                 <div class="form-row row-eq-spacing-sm">
@@ -57,7 +57,7 @@
                                 <div class="form-row row-eq-spacing-sm">
                                     <div class="col-sm">
                                     <label for="content-name{{ $tour->id }}" class="required">Content</label>
-                                    <textarea class="form-control form-control-lg" id="content-name{{ $tour->id }}" placeholder="Enter content here" name="content"></textarea>
+                                    <textarea class="form-control form-control-lg" id="content-name{{ $tour->id }}" placeholder="Enter content here" name="content">{{ $tour->content ?? '' }}</textarea>
                                     </div>
                                 </div>
 
@@ -73,16 +73,27 @@
                                         <option value="bottom" {{ $tour->placement == 'bottom' ? 'selected' : '' }}>Bottom</option>
                                         </select>
                                     </div>
-                                    <div class="col-md-9">
-                                        <label for="state">Path</label>
-                                        <input type="url" class="form-control" id="school-name" placeholder="Path" name="path" name="path">
+                                    <div class="col-md-6">
+                                        <label for="state">Next Path</label>
+                                        <input type="url" class="form-control" id="school-name" placeholder="Path" name="path" name="path" value="{{ $tour->path ?? null }}">
                                     </div>
+
+                                    <div class="col-md-3">
+                                            <label for="widget" class="required">Widget</label>
+                                            <select class="form-control" id="widget" required="required" name="widget">
+                                            <option value="sidebar" {{ $tour->placement == 'sidebar' ? 'selected' : '' }}>Sidebar</option>
+                                            <option value="navbar" {{ $tour->placement == 'navbar' ? 'selected' : '' }}>Navbar</option>
+                                            <option value="content" {{ $tour->placement == 'content' ? 'selected' : '' }}>Content</option>
+                                            <option value="footer" {{ $tour->placement == 'footer' ? 'selected' : '' }}>Footer</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                 </div>
 
                                 <!-- Submit button container -->
                                 <div class="text-right"> <!-- text-right = text-align: right -->
-                                    <input class="btn btn-primary" type="submit" value="Submit">
+                                    <button class="btn btn-primary" type="submit">Update</button>
                                 </div>
 
                             </form>

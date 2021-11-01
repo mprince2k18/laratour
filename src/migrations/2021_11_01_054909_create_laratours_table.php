@@ -20,6 +20,7 @@ class CreateLaratoursTable extends Migration
             $table->longText('content')->nullable();
             $table->longText('placement')->nullable();
             $table->longText('path')->nullable();
+            $table->longText('widget')->nullable();
             $table->timestamps();
         });
     }

@@ -59,18 +59,27 @@
                                     <!-- Third row -->
                                     <div class="form-row row-eq-spacing-md">
                                         <div class="col-md-3">
-                                        <label for="state" class="required">Placement</label>
-                                        <select class="form-control" id="state" required="required" name="placement">
-                                        <option value="left">Left</option>
-                                        <option value="right">Right</option>
-                                        <option value="top">Top</option>
-                                        <option value="bottom">Bottom</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <label for="state">Path</label>
-                                        <input type="url" class="form-control" id="school-name" placeholder="Path" name="path" name="path">
-                                    </div>
+                                            <label for="state" class="required">Placement</label>
+                                            <select class="form-control" id="state" required="required" name="placement">
+                                            <option value="left">Left</option>
+                                            <option value="right">Right</option>
+                                            <option value="top">Top</option>
+                                            <option value="bottom">Bottom</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="state">Next Path</label>
+                                            <input type="url" class="form-control" id="school-name" placeholder="Path" name="path" name="path">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="widget" class="required">Widget</label>
+                                            <select class="form-control" id="widget" required="required" name="widget">
+                                            <option value="sidebar">Sidebar</option>
+                                            <option value="navbar">Navbar</option>
+                                            <option value="content">Content</option>
+                                            <option value="footer">Footer</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 

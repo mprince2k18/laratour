@@ -27,6 +27,7 @@ class LaratourController extends Controller
         $tour->content = $request->content;
         $tour->placement = $request->placement;
         $tour->path = $request->path;
+        $tour->widget = $request->widget;
         $tour->save();
         return back();
     }
@@ -39,6 +40,7 @@ class LaratourController extends Controller
         $tour->content = $request->content;
         $tour->placement = $request->placement;
         $tour->path = $request->path;
+        $tour->widget = $request->widget;
         $tour->save();
         return back();
     }

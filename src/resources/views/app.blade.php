@@ -43,14 +43,19 @@
     @endforelse
   ],
   backdrop: false,
-  storage: false
+  storage: false,
+  onEnd: function (tour) {
+    // localStorage.setItem('laratour-end', true);
+  },
 });
 
 tour.init();
 
+if (localStorage.getItem('laratour-end') !== 'true') {
 @if(config('laratour.start_tour_on_load'))
   tour.start();
 @endif
+}
 
 $("#startTourBtn").click(function() {
   tour.restart();
@@ -86,7 +91,7 @@ if (localStorage.getItem('laratour-theme') == 'dark') {
 
 </script>
 
-<script  src="{{ config('laratour.script_path') }}"></script>
+<script src="{{ config('laratour.script_path') }}"></script>
 
 </body>
 </html>
