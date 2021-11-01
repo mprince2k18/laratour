@@ -7,7 +7,7 @@
                     <span class="sidebar-icon">
                         <i class="fa fa-code" aria-hidden="true"></i>
                     </span>
-                    Installation
+                    Create New Tour
                 </a>
 
 
@@ -15,19 +15,7 @@
                     <span class="sidebar-icon">
                         <i class="fa fa-terminal" aria-hidden="true"></i>
                     </span>
-                    CLI commands
-                </a>
-
-
-                <br />
-                <h5 class="sidebar-title">Components</h5>
-                <div class="sidebar-divider"></div>
-
-                <a href="#" id="element3" class="sidebar-link sidebar-link-with-icon">
-                    <span class="sidebar-icon">
-                        <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                    </span>
-                    File explorer
+                    All Tour Elements
                 </a>
 
             </div>
