@@ -9,14 +9,13 @@
         <span class="d-none d-sm-flex">Laratour</span>
     </a>
     <div class="navbar-content ml-auto">
-        <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()">
+        <button class="btn btn-action mr-5" type="button" id="toggleDarkMode" onclick="halfmoon.toggleDarkMode()">
             <i class="fa fa-moon-o" aria-hidden="true"></i>
             <span class="sr-only">Toggle dark mode</span>
         </button>
         <a href="javascript:;" id="startTourBtn" class="btn btn-primary" role="button">Start Tour</a>
     </div>
 </nav>
-
 
 
         <!-- Navbar fixed bottom start -->

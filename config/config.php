@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'app_name' => env('APP_NAME', 'Laratour'),
+
     'root_path' => '/tour',
 
     'layout' => 'layouts.app',
@@ -9,5 +12,8 @@ return [
     
     'css_path' => asset('laratour/css/style.css'),
 
-    'dark_mode' => env('LARATOUR_DARK_MODE', 'false'),
+    'dark_mode' => 'false',
+
+    'start_tour_on_load' => false,
+    
 ];

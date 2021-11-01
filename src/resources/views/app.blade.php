@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Laratour</title>
+  <title>{{ config('laratour.app_name') ?? 'Laratour' }}</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
   <!-- Halfmoon CSS -->
@@ -12,7 +13,7 @@
 <link rel="stylesheet" href="{{ config('laratour.css_path') }}">
 
 </head>
-<body class="{{ config('laratour.dark_mode') == 'true' ? 'dark-mode' : '' }} overflow-hidden">
+<body class="overflow-hidden">
 
 <div class="container">
   @yield('content')
@@ -26,7 +27,7 @@
 <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.js'></script>
 <script>
-    var tour = new Tour({
+  var tour = new Tour({
   steps: [
     @forelse(tour() as $tour)
     {
@@ -46,10 +47,42 @@
 });
 
 tour.init();
-// tour.start();
+
+@if(config('laratour.start_tour_on_load'))
+  tour.start();
+@endif
+
 $("#startTourBtn").click(function() {
   tour.restart();
 });
+
+
+// DARK MODE
+
+$('#toggleDarkMode').on('click', function(){
+
+  if (localStorage.getItem('laratour-theme') == 'light') {
+    localStorage.setItem('laratour-theme', 'dark');
+    $('body').addClass('dark-mode');
+    $('#toggleDarkMode').html('<i class="fa fa-sun-o"></i>');
+  } else {
+    localStorage.setItem('laratour-theme', 'light');
+    $('body').removeClass('dark-mode');
+    $('#toggleDarkMode').html('<i class="fa fa-moon-o"></i>');
+  }
+
+});
+
+// CHECK DARLK MODE
+if (localStorage.getItem('laratour-theme') == 'dark') {
+  $('body').addClass('dark-mode');
+    $('#toggleDarkMode').html('<i class="fa fa-sun-o"></i>');
+}else{
+    $('body').removeClass('dark-mode');
+    $('#toggleDarkMode').html('<i class="fa fa-moon-o"></i>');
+}
+
+// DARK MODE END
 
 </script>
 
