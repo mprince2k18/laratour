@@ -2,7 +2,14 @@
 
 namespace Mprince\Laratour;
 
-class Laratour
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Laratour extends Model
 {
-    // Build your next great package.
+    use HasFactory;
+
+    protected $guarded = ['id'];
+
+    //ENDS HERE
 }

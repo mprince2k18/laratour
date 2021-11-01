@@ -16,3 +16,4 @@ use Mprince\Laratour\Controllers\LaratourController;
 */
 
 Route::get(config('laratour.root_path'), [LaratourController::class,'index'])->name('tour.index');
+Route::post(config('laratour.root_path') .'/store', [LaratourController::class,'store'])->name('tour.store');

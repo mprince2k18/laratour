@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - bootstrap tour</title>
+  <title>Laratour</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
   <!-- Halfmoon CSS -->
@@ -28,39 +28,23 @@
 <script>
     var tour = new Tour({
   steps: [
+    @forelse(tour() as $tour)
     {
-      element: "#panel1",
-      title: "Installation",
-      content: "This is the installation panel",
-      placement: "bottom"
+          element: '{{ $tour->element }}',
+          title: '{{ $tour->title ?? null }}',
+          content: '{{ $tour->content ?? null }}',
+          placement: '{{ $tour->placement ?? null }}',
+          @if ($tour->path != null)
+            path: '{{ $tour->path }}',
+          @endif
     },
-    {
-      element: "#panel2",
-      title: "CLI commands",
-      content: "This is the CLI commands panel",
-      placement: "bottom"
-    },
-    {
-      element: "#panel3",
-      title: "File Explorer",
-      content: "This is the File Explorer panel",
-      placement: "right",
-    //   path: "tour.html"
-    },
-    {
-      element: "#panel4",
-      title: "Card Title",
-      content: "This is the Card Title",
-      placement: "bottom",
-    //   path: "tour.html"
-    },
+    @empty
+    @endforelse
   ],
   backdrop: false,
   storage: false
 });
 
-// tour.init();
-// tour.start();
 tour.init();
 // tour.start();
 $("#startTourBtn").click(function() {
